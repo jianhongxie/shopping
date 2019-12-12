@@ -11,20 +11,11 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": "~5.0|~6.0",
-        "graham-campbell/manager": "^2.0|^3.0|^4.0"
+        "php": ">=5.4.0"
     },
     "autoload": {
         "psr-4": {
             "Shopping\\OpenSDK\\": "src/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Shopping\\OpenSDK\\ServiceProvider"
-            ]
         }
     }
 }
