@@ -15,7 +15,7 @@
 namespace Shopping\OpenSDK\Vip\request\Union;
 
 use Shopping\OpenSDK\Vip\RequestInterface;
-use Shopping\OpenSDK\Vip\Util;
+use Shopping\OpenSDK\Vip\libs\Util;
 
 class ProductListRequest implements RequestInterface
 {

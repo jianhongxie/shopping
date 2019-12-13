@@ -1,8 +1,10 @@
 <?php
 /**
- * 创建推广位PID
+ * 商品信息
  *
- * @link: http://vop.vip.com/apicenter/method?serviceName=com.vip.adp.api.open.service.UnionPidService-1.0.0&methodName=genPidWithOauth
+ * @link: null
+ *
+ * @brief: 获取指定商品id集合的商品信息，注：返回开发者的商品佣金信息
  *
  * 
  * Date: 2019/9/27
@@ -13,7 +15,7 @@ namespace Shopping\OpenSDK\Vip\request\Union;
 use Shopping\OpenSDK\Vip\RequestInterface;
 use Shopping\OpenSDK\Vip\libs\Util;
 
-class GenPidWithOauthRequest implements RequestInterface
+class GetFullAddressRequest implements RequestInterface
 {
 
     /**
@@ -21,14 +23,14 @@ class GenPidWithOauthRequest implements RequestInterface
      *
      * @var string
      */
-    public $service = 'com.vip.adp.api.open.service.UnionPidService';
+    public $service = 'vipapis.address.AddressService';
 
     /**
      * 接口
      *
      * @var string
      */
-    public $method = 'genPidWithOauth';
+    public $method = 'getFullAddress';
 
     /**
      * 版本号
@@ -44,15 +46,23 @@ class GenPidWithOauthRequest implements RequestInterface
      */
     public $requestType = 'post';
 
-    private $pidNameList;
 
     private $apiParams = [];
 
 
-    public function setPidNameList($val)
+    public function setAreaCode($val)
     {
-        $this->pidNameList = $val;
-        $this->apiParams['pidNameList'] = $val;
+        $this->apiParams['area_code'] = $val;
+    }
+
+    public function setIsShowGate($val)
+    {
+        $this->apiParams['is_show_gat'] = $val;
+    }
+
+    public function setIsBind($val)
+    {
+        $this->apiParams['is_bind'] = $val;
     }
 
     /**
@@ -62,7 +72,7 @@ class GenPidWithOauthRequest implements RequestInterface
     {
         $this->apiParams['requestId'] = Util::requestId();
 
-        return ['pidGenRequest' => $this->apiParams];
+        return $this->apiParams;
     }
 
 }

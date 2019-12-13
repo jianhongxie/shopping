@@ -77,7 +77,7 @@ class Application
         } else {
             $httpStatusCode = curl_getinfo ($ch, CURLINFO_HTTP_CODE);
             if (200 !== $httpStatusCode) {
-                abort ($httpStatusCode);
+                throw new \Exception($httpStatusCode);
             }
         }
         curl_close ($ch);

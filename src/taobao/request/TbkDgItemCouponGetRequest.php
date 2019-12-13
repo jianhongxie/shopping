@@ -1,8 +1,8 @@
 <?php
 
-namespace Shopping\OpenSDKTaoBao\Request;
+namespace Shopping\OpenSDK\TaoBao\Request;
 
-use Shopping\OpenSDKTaoBao\RequestCheckUtil;
+use Shopping\OpenSDK\TaoBao\RequestCheckUtil;
 /**
  * TOP API: taobao.tbk.dg.item.coupon.get request
  *

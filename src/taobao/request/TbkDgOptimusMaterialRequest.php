@@ -6,9 +6,9 @@
  * @since 1.0, 2019.10.31
  */
 
-namespace Shopping\OpenSDKTaoBao\Request;
+namespace Shopping\OpenSDK\TaoBao\Request;
 
-use Shopping\OpenSDKTaoBao\RequestCheckUtil;
+use Shopping\OpenSDK\TaoBao\RequestCheckUtil;
 
 class TbkDgOptimusMaterialRequest
 {

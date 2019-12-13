@@ -1,7 +1,6 @@
 <?php
 
 namespace Shopping\OpenSDK\SuNing;
-
 class Application
 {
     public $appkey;
@@ -73,7 +72,6 @@ class Application
 
         // 头信息(内含签名)
         $signHeader = $this->generateSignHeader($sysParams);
-
         unset($sysParams);
 
         // 发起HTTP请求

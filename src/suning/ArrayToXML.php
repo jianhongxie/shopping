@@ -1,6 +1,6 @@
 <?php
 
-namespace Shopping\OpenSDKSuNing;
+namespace Shopping\OpenSDK\SuNing;
 
 class ArrayToXML
 {
